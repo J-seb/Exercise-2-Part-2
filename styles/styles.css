@@ -1,0 +1,39 @@
+main {
+    margin: 0.75rem 1rem 0.75rem 0.75rem;
+}
+
+.container {
+    display: grid;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    
+    .container {
+        display: grid;
+        grid-template-rows: repeat(5, auto);
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        display: grid;
+        grid-template-rows: repeat(4, auto);
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    .big-pic {
+        grid-column: 2 / 4;
+        grid-row: 1 / 3;
+    }
+}
